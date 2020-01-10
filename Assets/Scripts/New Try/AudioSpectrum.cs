@@ -15,10 +15,13 @@ public class AudioSpectrum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        AudioListener.volume = 1;
         AudioListener.GetSpectrumData(m_audioSpectrum, 0, FFTWindow.BlackmanHarris);
+        
         if(m_audioSpectrum != null && m_audioSpectrum.Length > 0)
         {
-            spectrumValue = m_audioSpectrum[0] * 100;
+            spectrumValue = m_audioSpectrum[0]*100;
         }
     }
 }

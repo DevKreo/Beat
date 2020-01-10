@@ -39,7 +39,7 @@ public class BeatDetection : MonoBehaviour
     {
         onsets = new float[ringBufferSize];
         notations = new float[ringBufferSize];
-        spectrum = new float[bufferSize];
+        spectrum = new float[128];
         averagePowerPerBand = new float[bands];
 
         audioSource = GetComponent<AudioSource>();
@@ -239,6 +239,6 @@ public class AudioData
 [System.Serializable]
 public class OnBeatEvent : UnityEvent
 {
-
+    
 }
 

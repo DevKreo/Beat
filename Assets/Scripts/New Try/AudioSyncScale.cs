@@ -14,13 +14,14 @@ public class AudioSyncScale : AudioSynce
             cube.transform.localPosition = Vector3.zero;
             cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
         }
+        m_isBeat = false;
     }
    
 
     public override void OnBeat()
     {
         base.OnBeat();
-        
+
         
         StartCoroutine("SpawnBlock");
         StopCoroutine("SpawnBlock");
